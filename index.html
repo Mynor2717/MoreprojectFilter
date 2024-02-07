@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/cream_crazy_icon-icons.com_74936.ico" type="image/x-icon">
+    <title>Projects && Test</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+
+<body>
+  
+        <section>
+            <h1>More Projects</h1>
+            <ul>
+                <li class="list active" data-filter="all">All</li>
+                <li class="list" data-filter="test">Test</li>
+                <li class="list" data-filter="ani">Animation</li>
+                <li class="list" data-filter="lan">Landing</li>
+                <li class="list" data-filter="pro">Projects</li>
+            </ul>
+            <div class="product">
+                <a class="itemBox" data-item="pro" href="https://mynorprojects.com/MoreGrid/"><img src="./images/Bento.png" alt="" href=""></a>
+                <a class="itemBox" data-item="lan" href="https://belenblog.online/"><img src="./images/Blog.png" alt=""></a>
+                <a class="itemBox" data-item="pro" href="https://mynor2717.github.io/Moviebillboard/"><img src="./images/Catologo de peliculas.png" alt=""></a>
+                <a class="itemBox" data-item="test" href="https://mynor2717.github.io/Photo-DOC/"><img src="./images/GaleriaDeFotos.png" alt=""></a>
+                <a class="itemBox" data-item="pro" href="https://mynorprojects.com/pos/"><img src="./images/Sales.png" alt=""></a>
+                <a class="itemBox" data-item="pro" href="https://mynorprojects.com/carrito/"><img src="./images/MOGJI.jpg" alt=""></a>
+
+                <!--Cuando se tenga el otro contenido agregar aqui mismo dentro del div-->
+
+            </div>
+        </section>
+  
+    <script>
+        let list = document.querySelectorAll('.list');
+        let itemBox = document.querySelectorAll('.itemBox');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function(){
+                for (let j = 0; j<list.length; j++) {
+                    list[j].classList.remove('active');
+
+                }
+                this.classList.add('active');
+
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for( let k = 0; k<itemBox.length; k++){
+                    itemBox[k].classList.remove('active');
+                    itemBox[k].classList.add('hide');
+
+
+                    if(itemBox[k].getAttribute('data-item') === dataFilter || dataFilter === "all"){
+                        itemBox[k].classList.remove('hide');
+                        itemBox[k].classList.add('active');
+
+                    }
+                }
+
+
+            })
+
+        }
+    </script>
+</body>
+
+</html>

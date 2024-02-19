@@ -42,7 +42,7 @@ section ul li {
     border-radius: 5px;
     font-size: x-large;
     font-weight: bold;
-    transition: all 200ms ease;
+    transition: all 500ms ease;
 }
 
 
@@ -72,7 +72,7 @@ section ul li.active {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    transition: all 200ms ease;
+    transition: all 500ms ease;
 }
 
 .product .itemBox {
@@ -82,7 +82,7 @@ section ul li.active {
    margin: 5px;
    display: block;
    cursor: pointer;
-   transition: all .5s ease;
+  
 }
 
 .product .itemBox.hide {
